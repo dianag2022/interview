@@ -1,13 +1,21 @@
-function sum(a){
+function sum(a) {
+    if (a instanceof Function) {
+        return a(0)
+    }
     let result = a ? a : 0;
-    return function(b){
-        if(! (b instanceof Function)){
-            return sum(a+b);
+    return function (b) {
+        if (b) {
+            if (!(b instanceof Function)) {
+                return sum(a + b);
+            }
+            if (b instanceof Function) {
+                return b(a);
+            }
         }
-        return b(a);
+        a(result)
     }
 }
-
+sum(result => { console.log('->', result)});
 sum(1)(result => { console.log('->', result)});
 sum(1)(2)(result => { console.log('->', result)});
 sum(1)(2)(4)(result => { console.log('->', result)});
