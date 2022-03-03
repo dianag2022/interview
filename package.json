@@ -1,0 +1,23 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "Interview tasks",
+  "main": "sum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianag2022/interview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dianag2022/interview/issues"
+  },
+  "homepage": "https://github.com/dianag2022/interview#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
