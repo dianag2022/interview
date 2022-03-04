@@ -1,4 +1,6 @@
 function extractValuesForKey(object, value) {
+    console.log(object.constructor.name)
+
     if(object.constructor !== Object) {
         throw new TypeError('extractValuesForKey() can only operate on object with Object as constructor');
     }
@@ -12,7 +14,6 @@ function extractValuesForKey(object, value) {
             if(key === value) {
                 if(path.length > 1) newPath = path.join('/');
                 resultMap.set(newPath, myObject[key])
-                console.log('path',newPath);
                 path = [];
             }
             if(myObject[key].constructor === Object) {
@@ -24,7 +25,7 @@ function extractValuesForKey(object, value) {
     return resultMap;
 }
 
-const object = {
+const Myobject = {
   uuid: 1,
   innerOne: {
     someKey: "some text",
@@ -39,5 +40,5 @@ const object = {
     },
   },
 };
-
-console.log(extractValuesForKey(object, 'uuid'))
+const result1 = extractValuesForKey(Myobject, 'uuid');
+console.log(result1);
