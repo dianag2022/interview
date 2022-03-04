@@ -1,6 +1,5 @@
 function extractValuesForKey(object, value) {
     console.log(object.constructor.name)
-
     if(object.constructor !== Object) {
         throw new TypeError('extractValuesForKey() can only operate on object with Object as constructor');
     }
@@ -25,7 +24,7 @@ function extractValuesForKey(object, value) {
     return resultMap;
 }
 
-const Myobject = {
+const myObject = {
   uuid: 1,
   innerOne: {
     someKey: "some text",
@@ -40,5 +39,5 @@ const Myobject = {
     },
   },
 };
-const result1 = extractValuesForKey(Myobject, 'uuid');
+const result1 = extractValuesForKey(myObject, 'uuid');
 console.log(result1);
