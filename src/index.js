@@ -12,14 +12,17 @@ function sum(a) {
                 return b(a);
             }
         }
-        a(result)
+        //console.log('resultado',a(result));
     }
 }
-sum(result => { console.log('->', result)});
-sum(1)(result => { console.log('->', result)});
-sum(1)(2)(result => { console.log('->', result)});
-sum(1)(2)(4)(result => { console.log('->', result)});
 
+module.exports = sum;
+/*
+sum(result => { console.log('->', result) })
+sum(1)(result => { console.log('->', result) });
+sum(1)(2)(result => { console.log('->', result) });
+sum(1)(2)(4)(result => { console.log('->', result) });
 
+*/
 /*SAME FUNCTION TO TASK 2 */
-sum(1)(2)(3)(4)(5)(6)(result => { console.log('->', result)});
+//sum(1)(2)(3)(4)(5)(6)(result => { console.log('->', result) });
